@@ -1,0 +1,22 @@
+<h2>{{ player.id ? 'Edit Player' : 'Add Player' }}</h2>
+<form (ngSubmit)="onSubmit()">
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="player.name" name="name" required />
+  
+  <label>Position:</label>
+  <input type="text" [(ngModel)]="player.position" name="position" required />
+  
+  <label>Team:</label>
+  <input type="text" [(ngModel)]="player.team" name="team" required />
+  
+  <label>Games Played:</label>
+  <input type="number" [(ngModel)]="player.stats.gamesPlayed" name="gamesPlayed" required />
+  
+  <label>Goals:</label>
+  <input type="number" [(ngModel)]="player.stats.goals" name="goals" required />
+  
+  <label>Assists:</label>
+  <input type="number" [(ngModel)]="player.stats.assists" name="assists" required />
+
+  <button type="submit">{{ player.id ? 'Update' : 'Add' }} Player</button>
+</form>

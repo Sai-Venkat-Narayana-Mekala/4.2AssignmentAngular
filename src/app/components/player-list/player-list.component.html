@@ -1,0 +1,9 @@
+<h2>Player List</h2>
+<ul>
+  <li *ngFor="let player of players">
+    {{ player.name }} - {{ player.position }} - {{ player.team }}
+    <button (click)="editPlayer(player)">Edit</button>
+    <button (click)="deletePlayer(player.id)">Delete</button>
+  </li>
+</ul>
+<button (click)="loadTopScorers()">Load Top Scorers</button>
